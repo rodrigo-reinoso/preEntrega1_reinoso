@@ -118,7 +118,7 @@ function carrito(opcion) {
       alert(
         "Los productos ingresados son: " +
           codigoDeProducto +
-          ", el total de su carrito es de \n $ " +
+          ", el total de su carrito es de: \n $ " +
           total
       );
     } else {
