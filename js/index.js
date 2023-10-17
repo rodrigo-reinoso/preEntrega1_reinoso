@@ -68,7 +68,7 @@ function carrito(opcion) {
   
   //accede a las opciones de productos y llama a la funcion totalResta a traves de un switch y agrega los importes a restar. 
   function quitarDeCarrito() {
-    let codigoProducto = pedirProducto();
+    let codigoProducto = restarProducto();
   
     while (codigoProducto !== 0) {
       // Controlamos la operacion que elije el usuario
@@ -96,7 +96,7 @@ function carrito(opcion) {
         default:
           alert("Usted ingresó un valor incorrecto");
       }
-      codigoProducto = pedirProducto();
+      codigoProducto = restarProducto();
     }
   }
   
@@ -147,7 +147,7 @@ function carrito(opcion) {
     }
   }
   
-  // estas funciones se utilizan para no repetir codigo -- pedirProducto -- pedirOpcion
+  // estas funciones se utilizan para no repetir codigo -- pedirProducto -- restarProducto -- pedirOpcion 
   function pedirProducto() {
     return parseInt(
       prompt(
@@ -155,7 +155,15 @@ function carrito(opcion) {
       )
     );
   }
-  
+
+  function restarProducto() {
+    return parseInt(
+      prompt(
+        "Ingrese el detalle del producto que desee eliminar del carrito: \n 1. Producto 1 $1000. \n 2. Producto 2 $2000. \n 3. Producto 3 $3000. \n 4. Producto 4 $4000. \n 0. Volver al menu anterior. "
+      )
+    );
+  }
+ 
   function pedirOpcion() {
     return parseInt(
       prompt(
