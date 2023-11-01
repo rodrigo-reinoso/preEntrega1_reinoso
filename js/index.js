@@ -176,7 +176,29 @@ function carrito(opcion) {
   
   let codigoDeProducto = "";
   let total = 0;
+
   
+  class Producto {
+    constructor(id, nombre, precio, cantidad){
+      this.id = id;
+      this.nombre = nombre;
+      this.precio = precio;
+      this.cantidad = cantidad
+
+    }
+  }
+
+  const productos = [
+    new Producto (1, "Camiseta Oficial 2023", 23000, 12),
+    new Producto (2, "Camiseta Alternativa 2023", 21000, 8),
+    new Producto (3, "Camiseta Arquero 2023" , 19000, 5),
+    new Producto (4, "Musculosa de entrenamiento 2023", 15000, 10),
+    new Producto (5, "Buzo de concentración 2023", 20000, 7),
+    new Producto (6, "Buzo de entrenamiento 2023", 18000, 6)
+  ];
+  
+
+  let carritoCompras = [];
   
   // Inicio del Programa
   
