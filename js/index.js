@@ -87,11 +87,12 @@ function terminarCompra(carrito) {
     return carrito.reduce((acc, producto) => acc + producto.precio, 0);
   };
 
-  alert(resumenCarrito(carrito));
-  alert(`Total a pagar: $${calcularTotal()}`);
+  // Llama a la función calcularTotal y retorna el total
+  return calcularTotal();
 }
 
 // Variables
+
 
 class Producto {
   constructor(id, nombre, precio, cantidad) {
@@ -147,10 +148,16 @@ while (opcion !== 0) {
 
   opcion = parseInt(
     prompt(
-      "Ingrese la opción que desea:\n1. Agregar al carrito\n2. Detalle total de la compra\n3. Eliminar del carrito\n0. Terminar compra"
+      "Ingrese la opción que desea:\n 1. Agregar al carrito\n 2. Detalle total de la compra\n 3. Eliminar del carrito\n 0. Terminar compra"
     )
   );
 }
-alert(terminarCompra(carrito));
+// Llama a la función terminarCompra para calcular el total a pagar
+const totalAPagar = terminarCompra(carrito);
 
+// Muestra el resumen de la compra y el total a pagar
+alert(resumenCarrito(carrito));
+alert(`Total a pagar: $${totalAPagar}`);
 alert("Gracias por utilizar nuestros servicios.");
+
+// Fin del programa
