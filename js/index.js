@@ -156,7 +156,7 @@ while (opcion !== 0) {
 const totalAPagar = terminarCompra(carrito);
 
 // Muestra el resumen de la compra y el total a pagar
-alert(resumenCarrito(carrito));
+alert(`En tu carrito contienes los siguientes items:\n${resumenCarrito(carrito)}`);
 alert(`Total a pagar: $${totalAPagar}`);
 alert("Gracias por utilizar nuestros servicios.");
 
