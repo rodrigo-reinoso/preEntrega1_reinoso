@@ -83,14 +83,11 @@ function resumenCarrito(array) {
 
 function terminarCompra(carrito) {
   // Función anónima para calcular el total a pagar
-  const calcularTotal = () => {
-    return carrito.reduce((acc, producto) => acc + producto.precio, 0);
-  };
+  const calcularTotal = carrito.reduce((acc, producto) => acc + producto.precio, 0);
+  return `El total a pagar es de: $${calcularTotal}`
 
-  // Llama a la función calcularTotal y retorna el total
-  return calcularTotal();
 }
-
+ 
 // Variables
 
 
@@ -157,7 +154,7 @@ const totalAPagar = terminarCompra(carrito);
 
 // Muestra el resumen de la compra y el total a pagar
 alert(`En tu carrito contienes los siguientes items:\n${resumenCarrito(carrito)}`);
-alert(`Total a pagar: $${totalAPagar}`);
+alert(terminarCompra(carrito));
 alert("Gracias por utilizar nuestros servicios.");
 
 // Fin del programa
